@@ -33,4 +33,4 @@ puts ticket.performer + "."
 print "The seat is "
 print ticket.seat + ", "
 print "and it costs $"
-print "%.2f." % ticket.price
+puts "%.2f." % ticket.price
