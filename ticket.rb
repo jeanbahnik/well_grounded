@@ -24,6 +24,10 @@ def ticket.price
   5.50
 end
 
+def ticket.available?
+  false
+end
+
 print "This ticket is for: "
 print ticket.event + ", at "
 print ticket.venue + ", on "
@@ -34,3 +38,7 @@ print "The seat is "
 print ticket.seat + ", "
 print "and it costs $"
 puts "%.2f." % ticket.price
+
+puts "This ticket is for: #{ticket.event}, at #{ticket.venue}, on #{ticket.date}."
+puts "The performer is #{ticket.performer}."
+puts "The seat is #{ticket.seat}, and it costs $#{"%.2f." % ticket.price}"
