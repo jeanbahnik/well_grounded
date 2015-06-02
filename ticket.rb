@@ -1,44 +1,48 @@
-ticket = Object.new
+class Ticket
+  def initialize(venue, date)
+    @venue = venue
+    @date = date
+  end
 
-def ticket.date
-  "01/02/03"
+  def venue
+    @venue
+  end
+
+  def date
+    @date
+  end
 end
 
-def ticket.venue
-  "Town Hall"
-end
+# def ticket.date
+#   "01/02/03"
+# end
 
-def ticket.event
-  "Author's reading"
-end
+# def ticket.venue
+#   "Town Hall"
+# end
 
-def ticket.performer
-  "Mark Twain"
-end
+# def ticket.event
+#   "Author's reading"
+# end
 
-def ticket.seat
-  "Second Balcony, row J, seat 12"
-end
+# def ticket.performer
+#   "Mark Twain"
+# end
 
-def ticket.price
-  5.50
-end
+# def ticket.seat
+#   "Second Balcony, row J, seat 12"
+# end
 
-def ticket.available?
-  false
-end
+# def ticket.price
+#   5.50
+# end
 
-print "This ticket is for: "
-print ticket.event + ", at "
-print ticket.venue + ", on "
-puts ticket.date + "."
-print "The performer is "
-puts ticket.performer + "."
-print "The seat is "
-print ticket.seat + ", "
-print "and it costs $"
-puts "%.2f." % ticket.price
+# def ticket.available?
+#   false
+# end
 
-puts "This ticket is for: #{ticket.event}, at #{ticket.venue}, on #{ticket.date}."
-puts "The performer is #{ticket.performer}."
-puts "The seat is #{ticket.seat}, and it costs $#{"%.2f." % ticket.price}"
+th = Ticket.new("Concert Hall", "11/12/13")
+cc = Ticket.new("Convention Center", "11/12/14")
+puts "We've created two tickets."
+puts "The first is for a #{th.venue} event on #{th.date}."
+puts "The second is for an event on #{cc.date} at #{cc.venue}."
